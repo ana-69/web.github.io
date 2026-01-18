@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif; /* Fuente redondeada y divertida, Sims-style */
+    background-color: #f0faff;   /* Blanco azulado muy suave, luminoso y alegre */
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Cabecera - degradado fiel al logo oficial de Los Sims 4 */
+.cabecera {
+    background: linear-gradient(135deg, #4276b7, #3cb9e1); /* Azul oscuro a azul claro oficial */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(60, 185, 225, 0.3);
+}
+
+.logo, .imagen-destacada {
+    max-width: 220px;
+    border: 8px solid transparent;
+    border-image: linear-gradient(45deg, #4276b7, #3cb9e1) 1; /* Borde degradado azul como el logo */
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(60, 185, 225, 0.5);
+    margin: 25px auto;
+    display: block;
+    animation: gentle-float 5s infinite alternate;
+}
+
+@keyframes gentle-float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Navegación vertical fija - alegre con acentos Plumbob */
+.navegacion {
+    background-color: rgba(255, 255, 255, 0.98);
+    width: 270px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 240px;
+    box-shadow: 6px 0 25px rgba(33, 185, 107, 0.2);
+    border-right: 6px solid #21b96b; /* Verde Plumbob en el borde derecho */
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.navegacion li {
+    margin: 18px 0;
+}
+
+.navegacion a {
+    display: block;
+    padding: 18px 35px;
+    color: #4276b7; /* Azul oscuro del logo */
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    border-left: 5px solid transparent;
+    border-radius: 0 15px 15px 0;
+}
+
+.navegacion a:hover {
+    background-color: #3cb9e1; /* Azul claro al hover */
+    color: white;
+    border-left: 5px solid #21b96b; /* Verde Plumbob al hover */
+    transform: translateX(15px);
+    box-shadow: 0 5px 15px rgba(33, 185, 107, 0.4);
+}
+
+/* Contenido principal */
+main {
+    margin-left: 290px;
+    padding: 60px 50px;
+    min-height: 100vh;
+}
+
+section {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(60, 185, 225, 0.15);
+    border-left: 8px solid #3cb9e1; /* Azul claro oficial */
+}
+
+h2 {
+    color: #4276b7; /* Azul oscuro */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-align: left;
+    border-bottom: 4px dotted #21b96b; /* Verde Plumbob punteado */
+    padding-bottom: 15px;
+}
+
+/* Tablas - sin border, con box-shadow fiel a Sims */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px #3cb9e1; /* Borde exterior azul claro */
+    background-color: #e6f5ff;     /* Fondo suave azul claro */
+}
+
+th, td {
+    padding: 18px;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px #3cb9e1; /* Líneas interiores azul claro */
+}
+
+th {
+    background-color: #4276b7; /* Azul oscuro para cabecera */
+    color: white;
+    font-size: 1.2em;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0f8ff;
+}
+
+/* Sección personajes - con toque Plumbob */
+.personaje {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+    padding: 25px;
+    background: linear-gradient(120deg, #f0f8ff, #e6ffe6); /* Azul suave a verde suave */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(33, 185, 107, 0.2);
+}
+
+.personaje img {
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(60, 185, 225, 0.4);
+}
+
+.descripcion {
+    flex: 1;
+}
+
+/* Formulario - fiel y divertido */
+.formulario-contacto label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    color: #4276b7;
+    font-size: 1.1em;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: #fff;
+    border: 3px solid #a6e329; /* Verde lima secundario */
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #21b96b; /* Verde Plumbob al foco */
+    box-shadow: 0 0 15px rgba(33, 185, 107, 0.4);
+}
+
+.formulario-contacto button {
+    background: linear-gradient(45deg, #3cb9e1, #21b96b); /* Azul claro a verde Plumbob */
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(33, 185, 107, 0.5);
+    transition: all 0.4s;
+}
+
+.formulario-contacto button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(60, 185, 225, 0.6);
+}
+
+/* Pie de página */
+.pie {
+    background: linear-gradient(135deg, #4276b7, #3cb9e1); /* Degradado azul oficial */
+    text-align: center;
+    padding: 40px;
+    color: white;
+    margin-left: 290px;
+    font-size: 1.2em;
+    box-shadow: 0 -6px 20px rgba(60, 185, 225, 0.3);
+}
