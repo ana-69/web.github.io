@@ -9,6 +9,12 @@ img {
     display: block;  /* Evita espacios en blanco extraños debajo de la imagen */
     margin: 20px auto; /* Las centra automáticamente si son más pequeñas que el texto */
 }
+video, audio {
+    max-width: 100%; /* No permite que el video sea más ancho que el texto */
+    height: auto;    /* Mantiene la proporción original */
+    display: block;  
+    margin: 20px 0;  /* Da espacio respecto al texto */
+}
 html {
     scroll-behavior: smooth;
 }
