@@ -252,62 +252,27 @@ tr:nth-child(even) td { background-color: #f0f8ff;
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
-
+    
+main, .pie, .cabecera {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
 .navegacion {
-    position: relative;
+        position: relative;   /* anulamos el fixed del original */
     width: 100%;
     left: auto;
     top: auto;
     height: auto;
-    border-right: none;
-    padding: 15px 0;
-    border-right: none;
     padding-top: 0;
-    padding-bottom: 12px;;
+    padding-bottom: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-bottom: 6px solid #21b96b;
+    border-right: none !important;
+    border-bottom: 5px solid #21b96b;
     background-color: rgba(255, 255, 255, 0.97);
     z-index: 90;
-}
-
-.navegacion a {
-        font-size: 1.1em;
-        padding: 12px 20px;
-        border-radius: 0;
     }
 
-    .navegacion a:hover {
-        transform: translateX(0); /* Quitamos el desplazamiento lateral en móvil */
-    }
-
-    main, .pie {
-        margin-left: 0 !important; /* Quitamos el hueco de la izquierda */
-        padding: 20px;
-    }
-
-    .cabecera {
-        padding: 30px 10px;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-.menu-icon {
-    display: block;
-}
-
-#menu-toggle:checked + .menu-icon + .navegacion {
-        display: block;
-        animation: slideDown 0.4s ease;
-    }
-
-    @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-15px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-.navegacion ul {
+    .navegacion ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -321,21 +286,25 @@ tr:nth-child(even) td { background-color: #f0f8ff;
 }
 
 .navegacion a {
-    padding: 10px 16px !important;
+        padding: 10px 16px !important;
     font-size: 1.05rem;
     border-radius: 10px;
     border-left: none !important;
     white-space: nowrap;
     transition: all 0.25s;
-}
+    }
 
-/* Quitamos margen izquierdo del main y footer en móvil */
-main,
+    .navegacion a:hover {
+        transform: translateX(0); /* Quitamos el desplazamiento lateral en móvil */
+    }
+
+    main,
 .pie {
-    margin-left: 0;
+    margin-left: 0 !important;
     padding-left: 15px;
     padding-right: 15px;
 }
+
 
 table {
         display: block;      /* Cambia a bloque solo en pantallas pequeñas */
