@@ -10,12 +10,6 @@ img, video, audio {
     margin: 20px auto;
 }
 
-table {
-    display: block;
-    overflow-x: auto;
-    max-width: 100%;
-}
-
 html {
     scroll-behavior: smooth;
 }
