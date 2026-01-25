@@ -78,7 +78,7 @@ body {
 table {
     width: 100%;
     display: table;
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
     margin: 20px 0;
     border-radius: 8px;
