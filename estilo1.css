@@ -67,40 +67,56 @@ body {
     background-color: #66bb6a;
 }
 .contenedor-tabla {
-    width: 100%;
-    overflow-x: auto; /* Scroll lateral */
-    display: block;
-    margin: 20px 0;
+   width: 100%;
+    max-width: 100%;
+    overflow-x: auto;           /* solo activa scroll si realmente desborda */
+    margin: 25px 0;
     border: 2px solid #4caf50;
     border-radius: 8px;
+    background-color: #f9fff9;
 }
 
 table {
     width: 100%;
-    display: table;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 20px 0;
-    border-radius: 8px;
-    /* Estas dos líneas son la clave */
-    display: block; 
-    overflow-x: auto; 
+    border-collapse: collapse;  /* mejor que separate en la mayoría de casos */
+    table-layout: auto;         /* deja que el navegador distribuya bien en escritorio */
+    margin: 0; 
     box-shadow: 0 0 0 3px #4caf50; 
-    table-layout: auto;
 }
 
 th, td {
-    padding: 12px;
+    padding: 12px 14px;
     text-align: center;
+    vertical-align: middle;
+    border: 1px solid #a5d6a7;
     background-color: #f1f8e9;
     box-shadow: inset 0 0 0 1px #a5d6a7;
     min-width: 120px; 
     word-wrap: break-word; /* Ayuda a que el texto largo no rompa la tabla */
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 th {
     background-color: #4caf50;
     color: white;
+    font-weight: 600;
+    min-width: 130px;
+}
+
+/* Filas alternas para mejor legibilidad */
+tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+.tabla-sims {
+    table-layout: fixed;        /* fuerza distribución más predecible */
+    width: 100%;
+}
+
+.tabla-sims th,
+.tabla-sims td {
+    min-width: 140px;           
 }
 
 /* Secciones */
@@ -196,6 +212,8 @@ h2 {
     color: white;
     margin-top: 50px;
 }
+
+
 @media (max-width: 768px) {
 
     /* Contenedores principales – para que el texto ocupe casi lo mismo que las imágenes */
@@ -253,7 +271,6 @@ h2 {
         max-width: 92%;
     }
 
-    /* --------------------- TABLA ESPECÍFICA --------------------- */
     table {
         table-layout: fixed;  
         display: block;
