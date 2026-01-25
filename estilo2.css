@@ -138,17 +138,21 @@ h2 {
     padding-bottom: 15px;
     text-align: left;
 }
-
+.contenedor-tabla {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;           /* solo activa scroll si realmente desborda */
+    margin: 25px 0;
+    border: #3cb9e1;
+    border-radius: #3cb9e1;
+    background-color: #e6f5ff;
+    
 /* Tablas - sin border, con box-shadow fiel a Sims */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    border-radius: 15px;
-    display: block; /* Permite el scroll */
-    overflow-x: auto; /* Scroll lateral en móviles */
-    white-space: nowrap;
-    box-shadow: 0 0 0 4px #3cb9e1;
+    display: table;
+    box-shadow: 0 0 0 4px #5bcbf1;  
     background-color: #e6f5ff;
 }
 
