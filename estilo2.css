@@ -142,23 +142,21 @@ h2 {
 
 /* Tablas - sin border, con box-shadow fiel a Sims */
 table {
-    width: 100%;
+    width: 100% !important; /* Fuerza el ancho completo */
+    display: table;        /* Recupera su comportamiento natural de tabla */
     border-collapse: collapse;
     margin: 30px 0;
     border-radius: 15px;
-    display: block; /* Permite el scroll */
-    overflow-x: auto; /* Scroll lateral en móviles */
-    white-space: nowrap;
     box-shadow: 0 0 0 4px #3cb9e1;
     background-color: #e6f5ff;
-    table-layout: auto;
+    table-layout: fixed;   /* Ayuda a que las columnas se repartan el espacio */
 }
 
 th, td {
     padding: 18px;
     text-align: center;
-    min-width: 150px;
     box-shadow: inset 0 0 0 1px #3cb9e1;
+    word-wrap: break-word;
 }
 
 th {
@@ -166,9 +164,10 @@ th {
     color: white;
 }
 
-th { background-color: #4276b7; color: white; }
-td { background-color: #ffffff; }
-tr:nth-child(even) td { background-color: #f0f8ff; }
+td { background-color: #ffffff; 
+}
+tr:nth-child(even) td { background-color: #f0f8ff; 
+}
 
 /* Sección personajes - con toque Plumbob */
 .personaje {
@@ -332,6 +331,17 @@ main,
     margin-left: 0;
     padding: 25px 15px;
 }
+
+table {
+        display: block;      /* Cambia a bloque solo en pantallas pequeñas */
+        overflow-x: auto;    /* Permite el deslizamiento lateral */
+        white-space: nowrap; /* Mantiene el contenido en una línea para el scroll */
+        table-layout: auto;  /* Permite que las celdas crezcan según el texto */
+    }
+    
+    th, td {
+        min-width: 150px;
+
 .personaje {
         flex-direction: column;
         text-align: center;
