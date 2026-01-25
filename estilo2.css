@@ -3,17 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-img {
-    max-width: 100%; /* El ancho máximo será el 100% de su contenedor padre */
-    height: auto;    /* Mantiene la proporción original para que no se deformen */
-    display: block;  /* Evita espacios en blanco extraños debajo de la imagen */
-    margin: 20px auto; /* Las centra automáticamente si son más pequeñas que el texto */
-}
-video, audio {
-    max-width: 100%; /* No permite que el video sea más ancho que el texto */
-    height: auto;    /* Mantiene la proporción original */
-    display: block;  
-    margin: 20px 0;  /* Da espacio respecto al texto */
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 html {
     scroll-behavior: smooth;
@@ -146,9 +140,8 @@ h2 {
 /* Tablas - sin border, con box-shadow fiel a Sims */
 table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 30px 0;
+    border-collapse: collapse;
+    margin: 20px 0;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 0 4px #3cb9e1; /* Borde exterior azul claro */

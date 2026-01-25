@@ -11,6 +11,13 @@ body {
     line-height: 1.6;
 }
 
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
 /* Cabecera */
 .cabecera {
     background-color: #4caf50;
