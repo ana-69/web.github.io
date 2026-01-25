@@ -30,6 +30,7 @@ img, video, audio {
     text-align: center;
     position: relative;
     box-shadow: 0 6px 20px rgba(60, 185, 225, 0.3);
+    margin-left: 290px;
 }
 
 .logo, .imagen-destacada {
@@ -49,7 +50,7 @@ img, video, audio {
     100% { transform: translateY(-10px); }
 }
 
-/* MENÚ HAMBURGUESA */
+/* Menú hambuerguesa */
 
 #menu-toggle {
     display: none;
@@ -138,22 +139,19 @@ h2 {
     padding-bottom: 15px;
     text-align: left;
 }
-.contenedor-tabla {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;           /* solo activa scroll si realmente desborda */
-    margin: 25px 0;
-    border: #3cb9e1;
-    border-radius: #3cb9e1;
-    background-color: #e6f5ff;
-    
+
 /* Tablas - sin border, con box-shadow fiel a Sims */
 table {
     width: 100%;
     border-collapse: collapse;
-    display: table;
-    box-shadow: 0 0 0 4px #5bcbf1;  
+    margin: 30px 0;
+    border-radius: 15px;
+    display: block; /* Permite el scroll */
+    overflow-x: auto; /* Scroll lateral en móviles */
+    white-space: nowrap;
+    box-shadow: 0 0 0 4px #3cb9e1;
     background-color: #e6f5ff;
+    table-layout: auto;
 }
 
 th, td {
