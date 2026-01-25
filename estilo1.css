@@ -37,7 +37,7 @@ body {
 
 .logo, .imagen-destacada {
     max-width: 200px;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 /* Navegación horizontal */
@@ -45,15 +45,17 @@ body {
     list-style: none;
     background-color: #388e3c;
     padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navegacion li {
-    display: inline;
-    margin: 0 20px;
+    margin: 5px 20px;
 }
 
 .navegacion a {
-    color: white;
+   color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -108,6 +110,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 0 3px #4caf50; /* Borde exterior verde */
+    min-width: 600px;
 }
 
 th, td {
@@ -144,6 +147,10 @@ tr:nth-child(even) td {
     flex: 1;
 }
 
+.lista-caracteristicas {
+    list-style: square inside;
+    margin-left: 20px;
+}
 /* Formulario */
 .formulario-contacto label {
     display: block;
@@ -161,12 +168,6 @@ tr:nth-child(even) td {
     font-size: 1em;
 }
 
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-    border-color: #4caf50;
-    outline: none;
-}
-
 .formulario-contacto button {
     background-color: #4caf50;
     color: white;
@@ -178,10 +179,6 @@ tr:nth-child(even) td {
     margin-top: 20px;
 }
 
-.formulario-contacto button:hover {
-    background-color: #388e3c;
-}
-
 /* Pie */
 .pie {
     text-align: center;
@@ -189,4 +186,19 @@ tr:nth-child(even) td {
     background-color: #2e7d32;
     color: white;
     margin-top: 50px;
+}
+@media (max-width: 768px) {
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personaje {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
