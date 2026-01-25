@@ -245,10 +245,6 @@ tr:nth-child(even) td {
 
 @media (max-width: 768px) {
 
-    .menu-icon {
-        display: block;
-    }
-}
 .navegacion {
     position: relative;
     width: 100%;
@@ -305,3 +301,4 @@ main,
         flex-direction: column;
         text-align: center;
     }
+}
