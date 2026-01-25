@@ -66,6 +66,32 @@ body {
 .navegacion a:hover {
     background-color: #66bb6a;
 }
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto; /* Scroll lateral */
+    display: block;
+    margin: 20px 0;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Obliga a la tabla a no encogerse demasiado */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #a5d6a7;
+    word-break: break-word; /* Rompe palabras largas para que no empujen la celda */
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
 
 /* Secciones */
 main {
@@ -75,9 +101,9 @@ main {
 }
 
 section {
-    margin-bottom: 50px;
     background-color: white;
-    padding: 30px;
+    padding: 25px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -101,35 +127,6 @@ h2 {
     color: #1b5e20;
 }
 
-
-/* Tablas SIN usar border - con box-shadow */
-table {
-    width: 100%;
-    overflow-x: auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 20px 0;
-    border-radius: 15px;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: 0 0 0 3px #4caf50; /* Borde exterior verde */
-    min-width: 600px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
-    background-color: #f1f8e9;
-    box-shadow: inset 0 0 0 1px #a5d6a7; /* Líneas interiores */
-}
-
-th {
-    background-color: #4caf50;
-    color: white;
-}
-
-tr:nth-child(even) td {
-    background-color: #e8f5e9;
-}
 
 /* Personajes (flex para imagen + texto) */
 .personaje {
@@ -194,13 +191,16 @@ tr:nth-child(even) td {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .personaje {
         flex-direction: column;
         text-align: center;
     }
+}
 
-    section {
-        padding: 15px;
-    }
+.pie {
+    text-align: center;
+    padding: 20px;
+    background-color: #388e3c;
+    color: white;
 }
