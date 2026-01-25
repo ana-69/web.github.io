@@ -243,7 +243,12 @@ tr:nth-child(even) td {
 
 /* RESPONSIVE */
 
-/* móviles: navegación horizontal arriba */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+}
 .navegacion {
     position: relative;
     width: 100%;
