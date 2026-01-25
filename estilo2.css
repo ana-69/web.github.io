@@ -24,6 +24,7 @@ body {
 }
 
 .logo, .imagen-destacada {
+    animation: float 5s infinite alternate;
     max-width: 220px;
     margin: 25px auto;
     display: block;
@@ -33,11 +34,6 @@ body {
     animation: gentle-float 5s infinite alternate;
     box-shadow: 0 8px 25px rgba(60, 185, 225, 0.5);
     
-}
-
-@keyframes float {
-    from { transform: translateY(0); }
-    to { transform: translateY(-12px); }
 }
 
 /* MENÚ HAMBURGUESA */
@@ -118,6 +114,7 @@ section {
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(25px); }
     to { opacity: 1; transform: translateY(0); }
+}
 
 h2 {
     color: #4276b7; /* Azul oscuro */
@@ -246,6 +243,7 @@ tr:nth-child(even) td {
 @media (max-width: 768px) {
 
 .navegacion {
+    display: none;
     position: relative;
     width: 100%;
     left: auto;
@@ -259,6 +257,10 @@ tr:nth-child(even) td {
     border-bottom: 5px solid #21b96b;
     background-color: rgba(255, 255, 255, 0.97);
     z-index: 90;
+}
+
+.menu-icon {
+    display: block;
 }
 
 #menu-toggle:checked + .menu-icon + .navegacion {
