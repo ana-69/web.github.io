@@ -36,6 +36,11 @@ body {
     
 }
 
+@keyframes gentle-float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
 /* MENÚ HAMBURGUESA */
 
 #menu-toggle {
@@ -50,6 +55,7 @@ body {
     position: absolute;
     top: 25px;
     right: 25px;
+    z-index: 110;
 }
 
 /* Navegación vertical fija escritorio - alegre con acentos Plumbob */
@@ -243,21 +249,42 @@ tr:nth-child(even) td {
 @media (max-width: 768px) {
 
 .navegacion {
-    display: none;
     position: relative;
     width: 100%;
     left: auto;
     top: auto;
     height: auto;
-    padding: 15px 0;
     border-right: none;
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-bottom: 5px solid #21b96b;
+    border-bottom: 6px solid #21b96b;
     background-color: rgba(255, 255, 255, 0.97);
     z-index: 90;
 }
+
+.navegacion a {
+        font-size: 1.1em;
+        padding: 12px 20px;
+        border-radius: 0;
+    }
+
+    .navegacion a:hover {
+        transform: translateX(0); /* Quitamos el desplazamiento lateral en móvil */
+    }
+
+    main, .pie {
+        margin-left: 0 !important; /* Quitamos el hueco de la izquierda */
+        padding: 20px;
+    }
+
+    .cabecera {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
 
 .menu-icon {
     display: block;
