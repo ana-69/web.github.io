@@ -212,3 +212,118 @@ tr:nth-child(even) td {
     font-size: 1.2em;
     box-shadow: 0 -6px 20px rgba(60, 185, 225, 0.3);
 }
+
+/* RESPONSIVE */
+
+/* móviles: navegación horizontal arriba */
+.navegacion {
+    position: relative !important;
+    width: 100%;
+    left: auto !important;
+    top: auto !important;
+    height: auto;
+    padding-top: 0 !important;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-right: none !important;
+    border-bottom: 5px solid #21b96b;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 90;
+}
+
+.navegacion ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    padding: 12px 10px 4px;
+    margin: 0;
+}
+
+.navegacion li {
+    margin: 0;
+}
+
+.navegacion a {
+    padding: 10px 16px !important;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    border-left: none !important;
+    white-space: nowrap;
+    transition: all 0.25s;
+}
+
+/* Quitamos margen izquierdo del main y footer en móvil */
+main,
+.pie {
+    margin-left: 0 !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (min-width: 481px) and (max -width: 899px) {
+    .navegacion a {
+        padding: 12px 20px;
+        font-size: 1.15rem;
+    }
+
+    main {
+        padding: 40px 25px;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 900px) {
+    .navegacion {
+        position: fixed !important;
+        width: 270px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding-top: 240px !important;   /* deja espacio para el header */
+        box-shadow: 6px 0 25px rgba(33, 185, 107, 0.2) !important;
+        border-right: 6px solid #21b96b !important;
+        border-bottom: none;
+        background-color: rgba(255, 255, 255, 0.98);
+        z-index: 100;
+    }
+
+    .navegacion ul {
+        display: block;
+        padding: 0 15px;
+    }
+
+    .navegacion a {
+        padding: 18px 35px !important;
+        font-size: 1.4em !important;
+        border-radius: 0 15px 15px 0 !important;
+        text-align: left;
+    }
+
+    main {
+        margin-left: 290px !important;
+        padding: 60px 50px !important;
+    }
+
+    .pie {
+        margin-left: 290px !important;
+    }
+}
+
+/* Ajustes moviles muy pequeños (ej. iPhone SE, Galaxy pequeños) */
+@media (max-width: 360px) {
+    .navegacion a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+        min-width: 110px;
+    }
+
+    .cabecera h1 {
+        font-size: 1.7rem;
+    }
+
+    .cabecera .subtitulo {
+        font-size: 1rem;
+    }
+}
