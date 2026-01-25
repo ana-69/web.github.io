@@ -101,14 +101,16 @@ h2 {
     color: #1b5e20;
 }
 
+
 /* Tablas SIN usar border - con box-shadow */
 table {
     width: 100%;
-    border-collapse: separate;
+    overflow-x: auto;
+    border-collapse: collapse;
     border-spacing: 0;
     margin: 20px 0;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 15px;
+    -webkit-overflow-scrolling: touch;
     box-shadow: 0 0 0 3px #4caf50; /* Borde exterior verde */
     min-width: 600px;
 }
