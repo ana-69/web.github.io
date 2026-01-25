@@ -187,20 +187,107 @@ h2 {
     margin-top: 50px;
 }
 @media (max-width: 768px) {
-    .navegacion ul {
-        flex-direction: column;
-        align-items: center;
+
+    /* Contenedores principales – para que el texto ocupe casi lo mismo que las imágenes */
+    main {
+        margin-left: 0 !important;
+        padding: 20px 12px 40px;
+        max-width: 100%;
+        width: 100%;
     }
-    
+
+    section {
+        padding: 20px 14px;
+        margin: 0 auto 40px auto;
+        max-width: 100%;
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(60, 185, 225, 0.12);
+    }
+
+    /* Texto ocupa todo el ancho disponible (como las imágenes) */
+    p, li, blockquote, .descripcion, ul, ol, dl {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto 1.1em;
+        padding: 0 4px;
+        font-size: 1.02rem;
+        line-height: 1.68;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    h2, h3 {
+        font-size: 1.7rem;
+        margin-bottom: 1.2em;
+    }
+
+    /* Imágenes y multimedia – ocupan casi todo el ancho */
+    img, video, .imagen-seccion {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 1.2rem auto;
+        border-radius: 12px;
+    }
+
     .personaje {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
+        padding: 16px;
     }
-}
 
-.pie {
-    text-align: center;
-    padding: 20px;
-    background-color: #388e3c;
-    color: white;
+    .personaje img {
+        max-width: 92%;
+    }
+
+    /* --------------------- TABLA ESPECÍFICA --------------------- */
+    table {
+        table-layout: fixed;               /* fuerza distribución más equilibrada */
+        width: 100%;
+        font-size: 0.93rem;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px 8px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Permite scroll horizontal si la tabla es muy ancha (muy útil con rowspan) */
+    .tabla-sims {
+        overflow-x: auto;
+        display: block;
+        margin: 1.5rem 0;
+        -webkit-overflow-scrolling: touch; /* scroll suave en iOS */
+    }
+
+    /* Opcional: si el rowspan sigue dando problemas graves, fuerza celdas más anchas */
+    td[rowspan] {
+        vertical-align: middle;
+    }
+
+    /* Formulario más cómodo en móvil */
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .formulario-contacto button {
+        width: 100%;
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    /* Navegación (si usas hamburguesa o horizontal) */
+    .navegacion a {
+        padding: 10px 14px;
+        font-size: 1rem;
+    }
 }
