@@ -33,7 +33,6 @@ img, video, audio {
 }
 
 .logo, .imagen-destacada {
-    animation: float 5s infinite alternate;
     max-width: 220px;
     margin: 25px auto;
     display: block;
@@ -70,7 +69,7 @@ img, video, audio {
 /* Navegación vertical fija escritorio - alegre con acentos Plumbob */
 .navegacion {
     background-color: rgba(255, 255, 255, 0.98);
-    width: 270px;
+    width: 290px;
     position: fixed;
     top: 0;
     left: 0;
@@ -148,6 +147,7 @@ table {
     border-radius: 15px;
     display: block; /* Permite el scroll */
     overflow-x: auto; /* Scroll lateral en móviles */
+    white-space: nowrap;
     box-shadow: 0 0 0 4px #3cb9e1;
     background-color: #e6f5ff;
 }
@@ -164,8 +164,9 @@ th {
     color: white;
 }
 
+th { background-color: #4276b7; color: white; }
 td { background-color: #ffffff; }
-tr:nth-child(even) td { background-color: #f0f8ff;
+tr:nth-child(even) td { background-color: #f0f8ff; }
 
 /* Sección personajes - con toque Plumbob */
 .personaje {
@@ -179,6 +180,11 @@ tr:nth-child(even) td { background-color: #f0f8ff;
     box-shadow: 0 8px 25px rgba(33, 185, 107, 0.2);
 }
 
+.personaje img {
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(60, 185, 225, 0.4);
+}
 .descripcion {
     flex: 1;
 }
