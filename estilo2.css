@@ -3,18 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-img, video, audio {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-table {
-    display: block;
-    overflow-x: auto;
-    max-width: 100%;
-}
 
 html {
     scroll-behavior: smooth;
@@ -24,6 +12,14 @@ body {
     background-color: #f0faff;   /* Blanco azulado muy suave, luminoso y alegre */
     color: #333;
     line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 /* Cabecera - degradado fiel al logo oficial de Los Sims 4 */
@@ -148,36 +144,28 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
     margin: 30px 0;
     border-radius: 15px;
-    display: block;
-    overflow: auto;
-    white-space: nowrap;
-    box-shadow: 0 0 0 4px #3cb9e1; /* Borde exterior azul claro */
-    background-color: #e6f5ff;     /* Fondo suave azul claro */
+    display: block; /* Permite el scroll */
+    overflow-x: auto; /* Scroll lateral en móviles */
+    box-shadow: 0 0 0 4px #3cb9e1;
+    background-color: #e6f5ff;
 }
 
 th, td {
     padding: 18px;
     text-align: center;
     min-width: 150px;
-    box-shadow: inset 0 0 0 1px #3cb9e1; /* Líneas interiores azul claro */
+    box-shadow: inset 0 0 0 1px #3cb9e1;
 }
 
 th {
-    background-color: #4276b7; /* Azul oscuro para cabecera */
+    background-color: #4276b7;
     color: white;
-    font-size: 1.2rem;
 }
 
-td {
-    background-color: #ffffff;
-}
-
-tr:nth-child(even) td {
-    background-color: #f0f8ff;
-}
+td { background-color: #ffffff; }
+tr:nth-child(even) td { background-color: #f0f8ff;
 
 /* Sección personajes - con toque Plumbob */
 .personaje {
@@ -189,12 +177,6 @@ tr:nth-child(even) td {
     background: linear-gradient(120deg, #f0f8ff, #e6ffe6); /* Azul suave a verde suave */
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(33, 185, 107, 0.2);
-}
-
-.personaje img {
-    max-width: 280px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(60, 185, 225, 0.4);
 }
 
 .descripcion {
