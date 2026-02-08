@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif; /* Fuente redondeada y divertida, Sims-style */
+    background-color: #f0faff;   /* Blanco azulado muy suave, luminoso y alegre */
+    color: #333;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Cabecera - degradado fiel al logo oficial de Los Sims 4 */
+.cabecera {
+    background: linear-gradient(135deg, #4276b7, #3cb9e1); /* Azul oscuro a azul claro oficial */
+    color: white;
+    padding: 60px 20px 120px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(60, 185, 225, 0.3);
+    margin-left: 290px;
+}
+
+.logo, .imagen-destacada {
+    max-width: 220px;
+    margin: 25px auto;
+    display: block;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-image: linear-gradient(45deg, #4276b7, #3cb9e1) 1; /* Borde degradado azul como el logo */
+    animation: gentle-float 5s infinite alternate;
+    box-shadow: 0 8px 25px rgba(60, 185, 225, 0.5);
+    
+}
+
+@keyframes gentle-float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Menú hambuerguesa */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 110;
+}
+
+/* Navegación vertical fija escritorio - alegre con acentos Plumbob */
+.navegacion {
+    background-color: rgba(255, 255, 255, 0.98);
+    width: 290px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 260px;
+    box-shadow: 6px 0 25px rgba(33, 185, 107, 0.2);
+    border-right: 6px solid #21b96b; /* Verde Plumbob en el borde derecho */
+     z-index: 100;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.navegacion li {
+    margin: 18px 0;
+}
+
+.navegacion a {
+    display: block;
+    padding: 18px 35px;
+    color: #4276b7; /* Azul oscuro del logo */
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-left: 5px solid transparent;
+    border-radius: 0 15px 15px 0;
+    transition: all 0.4s ease;
+}
+
+.navegacion a:hover {
+    background-color: #3cb9e1; /* Azul claro al hover */
+    color: white;
+    border-left: 5px solid #21b96b; /* Verde Plumbob al hover */
+    transform: translateX(15px);
+    box-shadow: 0 5px 15px rgba(33, 185, 107, 0.4);
+}
+
+/* Contenido principal */
+main {
+    margin-left: 290px;
+    padding: 60px 50px;
+    min-height: 100vh;
+}
+
+section {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 60px;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(60, 185, 225, 0.15);
+    border-left: 8px solid #3cb9e1; /* Azul claro oficial */
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #4276b7; /* Azul oscuro */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    border-bottom: 4px dotted #21b96b; /* Verde Plumbob punteado */
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+/* Tablas - sin border, con box-shadow fiel a Sims */
+table {
+    width: 100% !important; /* Fuerza el ancho completo */
+    display: table;        /* Recupera su comportamiento natural de tabla */
+    border-collapse: collapse;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 0 4px #3cb9e1;
+    background-color: #e6f5ff;
+    table-layout: fixed;   /* Ayuda a que las columnas se repartan el espacio */
+}
+
+th, td {
+    padding: 18px;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px #3cb9e1;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #4276b7;
+    color: white;
+}
+
+td { background-color: #ffffff; 
+}
+tr:nth-child(even) td { background-color: #f0f8ff; 
+}
+
+/* Sección personajes - con toque Plumbob */
+.personaje {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+    padding: 25px;
+    background: linear-gradient(120deg, #f0f8ff, #e6ffe6); /* Azul suave a verde suave */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(33, 185, 107, 0.2);
+}
+
+.personaje img {
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(60, 185, 225, 0.4);
+}
+.descripcion {
+    flex: 1;
+}
+
+/* Formulario - fiel y divertido */
+.formulario-contacto label {
+    font-weight: bold;
+    color: #4276b7;
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 1.1rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: #fff;
+    border: 3px solid #a6e329; /* Verde lima secundario */
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #21b96b; /* Verde Plumbob al foco */
+    box-shadow: 0 0 15px rgba(33, 185, 107, 0.4);
+}
+
+.formulario-contacto button {
+    background: linear-gradient(45deg, #3cb9e1, #21b96b); /* Azul claro a verde Plumbob */
+    color: white;
+    padding: 18px 45px;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 8px 20px rgba(33, 185, 107, 0.5);
+    
+}
+
+.formulario-contacto button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(60, 185, 225, 0.6);
+}
+
+/* Pie de página */
+.pie {
+    background: linear-gradient(135deg, #4276b7, #3cb9e1); /* Degradado azul oficial */
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-left: 290px;
+    font-size: 1.2rem;
+    box-shadow: 0 -6px 20px rgba(60, 185, 225, 0.3);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    
+main, .pie, .cabecera {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
+.navegacion {
+        position: relative;   /* anulamos el fixed del original */
+    width: 100%;
+    left: auto;
+    top: auto;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-right: none !important;
+    border-bottom: 5px solid #21b96b;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 90;
+    }
+
+    .navegacion ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    padding: 12px 10px 4px;
+    margin: 0;
+}
+
+.navegacion li {
+    margin: 0;
+}
+
+.navegacion a {
+        padding: 10px 16px !important;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    border-left: none !important;
+    white-space: nowrap;
+    transition: all 0.25s;
+    }
+
+    .navegacion a:hover {
+        transform: translateX(0); /* Quitamos el desplazamiento lateral en móvil */
+    }
+
+    main,
+.pie {
+    margin-left: 0 !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+table {
+        display: block;      /* Cambia a bloque solo en pantallas pequeñas */
+        overflow-x: auto;    /* Permite el deslizamiento lateral */
+        white-space: nowrap; /* Mantiene el contenido en una línea para el scroll */
+        table-layout: auto;  /* Permite que las celdas crezcan según el texto */
+    }
+    
+    th, td {
+        min-width: 150px;
+    }
+
+.personaje {
+        flex-direction: column;
+        text-align: center;
+    }
+}
